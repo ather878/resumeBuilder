@@ -4,6 +4,7 @@ public class ResumeEnhancementResponse {
     private String enhancedResume;
     private String summaryOfChanges;
     private String status;
+    private String pdfFilePath;
 
     // Getters and Setters
     public String getEnhancedResume() {
@@ -29,5 +30,13 @@ public class ResumeEnhancementResponse {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getPdfFilePath() {
+        return pdfFilePath;
+    }
+
+    public void setPdfFilePath(String pdfFilePath) {
+        this.pdfFilePath = pdfFilePath;
     }
 }

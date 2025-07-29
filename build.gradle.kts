@@ -31,9 +31,15 @@ dependencies {
     
     // PDF Processing
     implementation("org.apache.pdfbox:pdfbox:2.0.29")
+    implementation("com.itextpdf:itext7-core:7.2.5") {
+        exclude(group = "com.itextpdf", module = "bouncy-castle-adapter")
+        exclude(group = "com.itextpdf", module = "bouncy-castle-connector")
+        exclude(group = "com.itextpdf", module = "bouncy-castle-fips")
+    }
     
-    // File Upload
+    // File Operations
     implementation("commons-io:commons-io:2.13.0")
+    implementation("org.apache.commons:commons-lang3:3.12.0")
     
     // Testing
     testImplementation("org.springframework.boot:spring-boot-starter-test")
